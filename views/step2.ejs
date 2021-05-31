@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if(error) { %> 
+    <p><%=error%></p>
+    <% } %> 
+    <p>we have sent a verification code</p>
+
+    <p>please enter code here</p>
+
+    <form action="/step3" method="post">
+        <input type="hidden" name="id" value="{{id}}">
+        <input type="hidden" name="token">
+        <input type="submit" value="check code">
+    </form>
+</body> 
+</html>

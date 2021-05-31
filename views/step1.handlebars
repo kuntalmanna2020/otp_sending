@@ -1,0 +1,13 @@
+
+{{#if error}}
+
+<p>{{error}}</p>
+
+{{/if}}
+
+<p>Please enter your Phone Number (in International Format), starting with +91 to receive a verification code</p>
+
+<form method="post" action="/step2">
+    <input type="tel" name="number" placeholder="+91"/>
+    <input type="submit" value="Send Code"/>
+</form>
